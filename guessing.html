@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	  <script>
-	  </script>
+	 <script src = "guessingGame.js"></script>
+     <script src = "jquery-3.0.0.js"></script>
 	  <link type="text/css" rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
@@ -15,10 +15,16 @@ man eating rabbit: play a game with me. you win shall you be free.
 
 what should you do?</pre>
 
-<input id="guess"/>
-<button type = "button" onclick = "myFunction()"> is my guess!</button>
+<input id="guess" onkeydown="keyCode(event)"/>
+<button type = "button" onclick = "playersGuessSubmission()"> is my guess!</button>
 <p><br></p>
-<button type = "button" onclick = "again()"> try again!</button> <!--will display after losing the game-->
+<p id="result"></p>
+<p id= "hint"></p>
+
+<button type = "button" onclick = "finalHint()"> your final hint</button>
+<p id = "final"></p>
+
+<button type = "button" onclick = "playAgain()"> play again!</button> <!--will display after losing the game-->
 
 
 
